@@ -1,0 +1,9 @@
+body {
+	background-color: #222233;
+	color: #AACCFF;
+	font-family: 'Segoe UI', Tahoma, sans-serif;
+	height: : 150px;
+	overflow: hidden;
+	border-radius: Spx; 
+	-webkit-app-region: drag;
+}
