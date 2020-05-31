@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+ 	font-family: 'Lobster', cursive;
+ 	font-size: 25px;
+ 	text-align: center;
+}
+
+h2 {
+ 	font-family: 'Lobster', cursive;
+ 	font-size: 20px;
+ 	color: #00adb5;
+}
+
+h3 {
+ 	font-family: 'Lobster', cursive;
+ 	font-size: 15px;
+ 	text-align: center;
+}
+
+section {
+	position: relative;
+	height: 100vh;
+	display: flex;
+}
+
+section .leftScreen {
+	position: relative;
+	flex-grow: 1;
+	transition: 1s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background: #222831;
+}
+
+section .rightScreen {
+	position: relative;
+	flex-grow: 4;
+	transition: 1s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background: #eeeeee;
+	font-size: 50px !important;
+}
+
+section .leftScreen:hover {
+	flex-grow: 1.5;
+}
+
+section .leftScreen button{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: : 80px;
+	padding-right: : 80px;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left:  0px;
+	margin-right:  40px;
+	width: 100%;
+	background-color: #393e46;
+	color: #eeeeee;
+	font-family: 'Lobster', cursive;
+	border-radius: 20%;
+}
+
+section .leftScreen button:hover{
+	background-color: #00adb5;
+	color: #393e46;
+}
+
+section .rightScreen button{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left:  50px;
+	padding-right:  50px;
+	align-items: center;
+	background-color: #222831;
+	color: #eeeeee;
+	font-family: 'Lobster', cursive;
+	border-radius: 5%;
+}
+
+section .rightScreen button:hover{
+	background-color: #393e46;
+}
+
+section .rightScreen input{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left:  50px;
+	padding-right:  50px;
+	align-items: center;
+	background-color: #222831;
+	color: #eeeeee;
+	border-radius: 5%;
+}
+
+section .leftScreen .imgIcon
+{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	padding-left: 12px;
+	padding-top: 10px;
+}
+
+section .leftScreen .imgIcon img
+{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+section .leftScreen .iconName {
+	padding-top: 0px !important;
+	margin-top: 0px !important;
+	padding-bottom: 170px;
+}
