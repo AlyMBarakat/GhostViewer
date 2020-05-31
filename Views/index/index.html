@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="eng">
 <head>
 	<meta charset="utf-8">
@@ -9,9 +8,31 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Index page</h1>
-	<script type="text/javascript">
-		require('./index.js');
-	</script>
+	<div>
+		<section class="split">
+			<div class="screen">
+				<div class="card1">
+					<div class="imgIcon">
+						<img src="../images/Ghost-icon.png">
+					</div>
+					<h1>Ghost Viewer</h1>
+					<div class="Paragraph">
+						<p>Ghost viewer is a Remote Viewing application based on Electron and webRTC frameworks</p>		
+					</div>
+				</div>
+			</div>
+			<div class="screen">
+				<div class="card2">
+					<div class="category">
+						<h1>Categories</h1>	
+						<button class="button" onclick="window.location.href='../create/create.html';" id="join">Create Ghost Session</button>
+						<button class="button" onclick="window.location.href='../join/join.html';" id="join">Join Ghost Session</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">		require('./index.js'); </script>
 </body>
 </html>

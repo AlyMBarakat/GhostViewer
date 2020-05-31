@@ -18,18 +18,20 @@ let indexURL = { //index HTML file object
 }
 
 function createWindow() {
-	win = new BrowserWindow(); //Create window
+	win = new BrowserWindow({webPreferences: {nodeIntegration: true}, width: 700, height: 400}); //Create window 700x400
 	win.loadURL(url.format(indexURL)); //Load index HTML file in window
 	
-	//open Developer tools for debugging
+	//Uncomment to open Developer tools for debugging
 	//win.webContents.openDevTools();
 	
 	win.on('closed', () => {win = null;}); //Handle closing window
 }
 
-
 //Execute create window
 app.on('ready', createWindow);
+
+
+
 
 
 //MAC(UNIX) extra features handling
