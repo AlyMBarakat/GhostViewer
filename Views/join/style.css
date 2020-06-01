@@ -97,8 +97,8 @@ section .rightScreen button:hover{
 section .rightScreen input{
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left:  50px;
-	padding-right:  50px;
+	padding-left:  10px;
+	padding-right:  10px;
 	align-items: center;
 	background-color: #222831;
 	color: #eeeeee;
