@@ -1,0 +1,10 @@
+body {
+  font-family: sans-serif;
+  background: #00adb5;
+}
+
+video {
+  max-width: 100%;
+  /*width: 320px;*/
+ /* filter: hue-rotate(180deg) saturate(200%);*/
+}
