@@ -7,5 +7,9 @@
 	},
 	"scripts": {
 		"start": "electron ."
+	},
+	"dependencies": {
+		"socket.io-client": "^2.3.0",
+		"ws": "^7.3.0"
 	}
 }
