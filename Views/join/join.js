@@ -2,6 +2,7 @@ const electron = require("electron");
 let BrowserWindow = electron.remote.BrowserWindow; //Remote object from main process
 const path = require("path");	//Built in path module
 const url = require("url");		//Built in url modul
+
 const joinBtn = document.getElementById('joinBtn');
 //URLs
 let workURL = { //index HTML file object

@@ -5,13 +5,16 @@
 // In this codelab, you will be streaming video only: "video: true".
 // Audio will not be streamed because it is set to "audio: false" by default.
 const mediaStreamConstraints = {
-  // video: {
-  //       cursor: 'always' | 'motion' | 'never',
-  //       displaySurface: 'application' | 'browser' | 'monitor' | 'window'
-  //   }
   video: {
-          mandatory: { chromeMediaSource: 'desktop'}
-        }
+            mandatory: {
+              chromeMediaSource: 'desktop',
+              // chromeMediaSourceId: source.id,
+              // minWidth: 1280,
+              // maxWidth: 1280,
+              // minHeight: 720,
+              // maxHeight: 720
+            }
+          }
 };
 
 // Set up to exchange only video.
@@ -286,5 +289,6 @@ function getPeerName(peerConnection) {
 function trace(text) {
   text = text.trim();
   const now = (window.performance.now() / 1000).toFixed(3);
+
   console.log(now, text);
 }
