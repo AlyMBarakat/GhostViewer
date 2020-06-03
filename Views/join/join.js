@@ -214,6 +214,13 @@ function openDataChannel() {
 
 /*
 
+=======
+let BrowserWindow = electron.remote.BrowserWindow; //Remote object from main process
+const path = require("path");	//Built in path module
+const url = require("url");		//Built in url modul
+
+const joinBtn = document.getElementById('joinBtn');
+>>>>>>> 49f084775de250d7be40d617b1237bfd4588572a
 //URLs
 let workURL = { //index HTML file object
 	pathname: path.join(__dirname, '../stream/index.html'),
@@ -237,6 +244,7 @@ joinBtn.addEventListener('click', function() {
 	console.log(userName);
 	console.log(captcha);
 	
+<<<<<<< HEAD
 	//createRendererWindow(workURL);
 	
 
