@@ -6,6 +6,8 @@ const BrowserWindow = electron.BrowserWindow;	//Including BrowserWindow sub-modu
 const path = require("path");	//Built in path module
 const url = require("url");		//Built in url module
 
+const io = require('socket.io-client');
+const socket = io('http://localhost:3000');
 
 //window variables
 let win;
@@ -22,8 +24,9 @@ function createWindow() {
 	win.loadURL(url.format(indexURL)); //Load index HTML file in window
 	
 	//Uncomment to open Developer tools for debugging
-	//win.webContents.openDevTools();
-	
+	win.webContents.openDevTools();
+	let offer = "Client: Hello Server";
+	socket.emit('offer', offer);
 	win.on('closed', () => {win = null;}); //Handle closing window
 }
 
