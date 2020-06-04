@@ -1,6 +1,7 @@
 console.log("main process working");
 
-const electron = require("electron"); //including electron
+const electron = require("electron");	//including electron
+const ipc = electron.ipcMain;			//Including IPC submodule for MainSide
 const app = electron.app;						//Including app sub-module
 const BrowserWindow = electron.BrowserWindow;	//Including BrowserWindow sub-module
 const path = require("path");	//Built in path module
@@ -30,11 +31,20 @@ function createWindow() {
 	win.on('closed', () => {win = null;}); //Handle closing window
 }
 
+let userData;
+
+ipc.on('userData-send', (event,arg) => {
+	console.log(arg);
+	userData = arg;
+	event.reply('userData-Reply', arg);
+});
+
+ipc.on('userData-get', (event,arg) => {
+	event.reply('userData-set', userData);
+});
+
 //Execute create window
 app.on('ready', createWindow);
-
-
-
 
 
 //MAC(UNIX) extra features handling
