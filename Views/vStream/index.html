@@ -1,0 +1,141 @@
+<html> 
+ 
+   <head> 
+      <title>WebRTC Video Demo</title>
+      <link rel = "stylesheet" href = "../../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+   </head>
+	
+   <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+      h1 {
+         font-family: 'Lobster', cursive;
+         font-size: 25px;
+         text-align: center;
+      }
+
+      h2 {
+         font-family: 'Lobster', cursive;
+         font-size: 20px;
+         color: #00adb5;
+      }
+
+      h3 {
+         font-family: 'Lobster', cursive;
+         font-size: 15px;
+         text-align: center;
+      }
+	
+      body { 
+         background: #eee; 
+         padding: 5% 0; 
+      } 
+		
+      video { 
+         background: black; 
+         border: 1px solid gray; 
+      }
+
+      .left .button2{
+         padding-top: 10px;
+         padding-bottom: 10px;
+         padding-left:  50px;
+         padding-right:  50px;
+         align-items: center;
+         background-color: #222831;
+         color: #eeeeee;
+         font-family: 'Lobster', cursive;
+         border-radius: 5%;
+      }
+
+      .left .button2:hover{
+         background-color: #393e46;
+      }
+
+      .left .button1{
+         padding-top: 10px;
+         padding-bottom: 10px;
+         padding-left:  50px;
+         padding-right:  50px;
+         align-items: center;
+         background-color: #222831;
+         color: #eeeeee;
+         font-family: 'Lobster', cursive;
+         border-radius: 5%;
+      }
+
+      .left .button1:hover{
+         background-color: #00adb5;
+         color: #393e46;
+      }
+		
+      .call-page { 
+         position: relative; 
+         display: block; 
+         margin: 0 auto; 
+         width: 500px; 
+         height: 500px; 
+      } 
+		
+      #localVideo { 
+         width: 150px; 
+         height: 150px; 
+         position: absolute; 
+         top: 15px; 
+         right: 15px; 
+      }
+		
+      #remoteVideo { 
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         min-width: 100%;
+         min-height: 100%;
+         width: auto;
+         height: auto;
+         z-index: -100;
+         transform: translateX(-50%) translateY(-50%);
+         background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+         background-size: cover;
+         transition: 1s opacity;
+      }
+		
+   </style>
+	
+   <body>
+	
+   <div id = "loginPage" class = "container text-center"> 
+	
+      <div> 
+         <div>
+            <h1>Ghost Viewer</h1>
+            <h2>Please wait, Establishing RTC connection...</h2> 
+            <label for = "usernameInput" class = "sr-only">Login</label> 
+            <!-- <button id = "loginBtn" class = "btn btn-lg btn-primary btnblock">Start Stream</button> -->
+         </div> 
+      </div> 
+   </div>
+	
+   <div id = "callPage" class = "call-page">
+      <!-- <video id = "localVideo" autoplay></video>  -->
+      <video id = "remoteVideo" autoplay></video>
+		
+      <div class = "row text-center"> 
+         <div class = "col-md-12">
+         <section class="left">
+            <button class="button1" id = "callBtn" class="leftScreen">Connect Ghost</button>
+            <button class="button2" id = "hangUpBtn">Disconnect</button>
+         </section>  
+            
+         </div>
+      </div> 
+      
+   </div>
+	
+   <script src = "client.js"></script> 
+	
+   </body>
+	
+</html>	

@@ -9,6 +9,7 @@
 		"start": "electron ."
 	},
 	"dependencies": {
+		"bootstrap": "^4.5.0",
 		"socket.io-client": "^2.3.0",
 		"ws": "^7.3.0"
 	}
