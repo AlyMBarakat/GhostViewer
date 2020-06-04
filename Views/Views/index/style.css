@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+ 	font-family: 'Lobster', cursive;
+}
+
+button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: : 80px;
+	padding-right: : 80px;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	background-color: #222831;
+	color: #eeeeee;
+	font-family: 'Lobster', cursive;
+	border-radius: 5%;
+}
+
+button:hover {
+	background-color: #393e46;
+}
+
+section {
+	position: relative;
+	height: 100vh;
+	display: flex;
+}
+
+section .screen {
+	position: relative;
+	flex-grow: 1;
+	transition: 1s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+section .screen:hover {
+	flex-grow: 2;
+}
+
+section .screen:nth-child(1) {
+	background: #222831;
+}
+
+section .screen:nth-child(2) {
+	background: #eeeeee;	
+}
+
+section .screen .card1
+{
+	max-width: 300px;
+	text-align: center;
+	transition: 0.5s;
+	color: #00ADB5;
+}
+
+section .screen .card2
+{
+	max-width: 300px;
+	text-align: center;
+	transition: 0.5s;
+	color: #393E46;
+}
+
+.form{
+	padding:20px !important;
+	padding-top: 10px;
+}
+
+.form-group{
+	padding-bottom: 15px;
+}
+
+.form input[type="submit"]{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: : 80px;
+	padding-right: : 80px;
+	width: 100%;
+	background-color: #393e46;
+	color: #eeeeee;
+	font-family: 'Lobster', cursive;
+	border-radius: 10%;
+}
+
+.form button{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: : 80px;
+	padding-right: : 80px;
+	width: 100%;
+	background-color: #393e46;
+	color: #eeeeee;
+	font-family: 'Lobster', cursive;
+	border-radius: 10%;
+}
+
+section .screen .card1 .imgIcon
+{
+	margin-bottom: 0 !important;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin:auto auto;
+}
+
+section .screen .card1 .imgIcon img
+{
+	max-width: 70%;
+	max-height: 70%;
+}
+
+section .screen .card1 .Paragraph
+{
+	text-align: left !important;
+	font-family: 'Lobster', cursive;
+}
+
+section .screen .card2 .category {
+	padding: 20px 20px;
+	text-align: center;
+} 

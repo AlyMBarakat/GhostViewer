@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewPort" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+	<title>GhostViewer Application</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div>
+		<section class="split">
+			<div class="leftScreen">
+				<div class="card1">
+					<div class="imgIcon">
+						<img src="../images/Ghost-icon.png">
+					</div>
+					<h2 class="iconName">GhostViewer</h2>
+					<button class="button" onclick="window.location.href='../index/index.html';" id="index">Logout</button>
+				</div>
+			</div>
+			<div class="rightScreen">
+				<div class="card2">
+					<h1>Create Session</h1>
+					<h3>A session would be created as soon as the other computer enters the captcha.</h3>
+					<h3>Copy the captcha:</h3>
+					<div class="copy">
+						<h2 id="captcha"></h2>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">		require('./create.js'); </script>
+</body>
+</html>

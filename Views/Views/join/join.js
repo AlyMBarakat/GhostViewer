@@ -22,7 +22,7 @@ function createRendererWindow(urlObj) {
   let remoteWin = new BrowserWindow({webPreferences: {nodeIntegration: true}});  //Remote object of Browser Window
   remoteWin.setFullScreen(true);
   remoteWin.loadURL(url.format(urlObj)); //send IPC message
-  //remoteWin.webContents.openDevTools();
+  remoteWin.webContents.openDevTools();
 }
 
 //On button click: get captcha and request join
