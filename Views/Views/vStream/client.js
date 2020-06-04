@@ -104,7 +104,11 @@ function loadStart(){
    }, 5000);
 }
 loadStart();
+
 // Login when the user clicks the button 
+loginBtn.addEventListener("click", function (event) { 
+   
+});
 
 function handleLogin(success) { 
    if (success === false) { 
@@ -160,12 +164,10 @@ function handleLogin(success) {
                   candidate: event.candidate 
                }); 
             } 
-         };
-         openDataChannel();	
+         };	
       }, function (error) { 
          console.log(error); 
       }); 	
-      
    } 
 };
   
@@ -266,41 +268,3 @@ function handleLeave() {
    yourConn.onicecandidate = null; 
    yourConn.onaddstream = null; 
 };
-
-function openDataChannel() { 
-
-   var dataChannelOptions = { 
-      reliable:true 
-   }; 
-    
-   dataChannel = yourConn.createDataChannel("channel1", dataChannelOptions);
-    
-   dataChannel.onerror = function (error) { 
-      console.log("Error:", error); 
-   };
-    console.log('datachannel created');
-
-   window.addEventListener('mousemove', e => {
-      var data= {
-         "x": e.x,
-         "y": e.y,
-         "width": remoteVideo.getBoundingClientRect().width,
-         "height": remoteVideo.getBoundingClientRect().height,
-         "leftclick": null
-      }
-      //console.log(data.x+" "+data.y);
-      dataChannel.send(JSON.stringify(data));
-   });
-   remoteVideo.onclick=function(event){
-      var data= {
-         "x": e.x,
-         "y": e.y,
-         "width": remoteVideo.getBoundingClientRect().width,
-         "height": remoteVideo.getBoundingClientRect().height,
-         "leftclick": true
-      }
-      dataChannel.send(JSON.stringify(data));
-   }
-
-   
-}

@@ -1,7 +1,4 @@
 //Generate random captcha
-console.log('create script');
-const electron = require("electron");
-const ipc = electron.ipcRenderer;
 function getRandomString(length) {
     var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var result = '';
@@ -10,6 +7,7 @@ function getRandomString(length) {
     }
     return result;
 }
+
 let captcha = getRandomString(10);
 
 console.log("Generated captcha:");
@@ -121,7 +119,7 @@ function handleLogin(success) {
          }; 
 			
          yourConn = new webkitRTCPeerConnection(configuration); 
-			yourConn.ondatachannel = receiveChannelCallback;
+			
          // setup stream listening 
          yourConn.addStream(stream);
 			
@@ -139,7 +137,6 @@ function handleLogin(success) {
                }); 
             } 
          };	
-         
       }, function (error) { 
          console.log(error); 
       }); 	
@@ -184,44 +181,3 @@ function handleLeave() {
    yourConn.onicecandidate = null; 
    yourConn.onaddstream = null; 
 };
-//MARKOOOOOOB
-
-/*function openDataChannel() { 
-
-   var dataChannelOptions = { 
-      reliable:true 
-   }; 
-    
-   dataChannel = yourConn.createDataChannel("channel1", dataChannelOptions);
-    
-   dataChannel.onerror = function (error) { 
-      console.log("Error:", error); 
-   };
-    console.log('datachannel created');
-    dataChannel.addEventListener("message", e => {
-       console.log('recieved message');
-      //send data using IPC to main
-      ipc.send('robotData-send',e.data);
-      //Event listener
-      ipc.on('robotData-reply', function(event,arg) {
-      });
-    });
-}*/
-function receiveChannelCallback(event) {
-   receiveChannel = event.channel;
-   receiveChannel.onmessage = handleReceiveMessage;
-
- }
-
-
- function handleReceiveMessage(event)
-{
-  // console.log(event.data);
-
-  //send data using IPC to main
-  ipc.send('robotData-send',event.data);
-  //Event listener
-  ipc.on('robotData-reply', function(event,arg) {
-  });
-  
-}
