@@ -8,15 +8,14 @@ const BrowserWindow = electron.BrowserWindow;	//Including BrowserWindow sub-modu
 const path = require("path");	//Built in path module
 const url = require("url");		//Built in url module
 
-const io = require('socket.io-client');
-const socket = io('http://localhost:3000');
-
 let userData;
-let robotData;
 
-//window variables
+//window object
 let win;
-function bolla (data){
+
+
+
+function applyRobot (data){
 	  
 	console.log(data.leftclick);
 
@@ -56,7 +55,7 @@ function createWindow() {
 }
 
 
-
+//IPC channels
 ipc.on('userData-send', (event,arg) => {
 	console.log(arg);
 	userData = arg;
@@ -69,7 +68,7 @@ ipc.on('userData-get', (event,arg) => {
 
 ipc.on('robotData-send', (event,arg) => {
 	event.reply('robotData-reply', "Robot message is recieved");
-	bolla(JSON.parse(arg));
+	applyRobot(JSON.parse(arg));
 });
 
 
