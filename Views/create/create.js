@@ -104,11 +104,6 @@ function handleLogin(success) {
          video: {
                   mandatory: {
                     chromeMediaSource: 'desktop',
-                    // chromeMediaSourceId: source.id,
-                    // minWidth: 1280,
-                    // maxWidth: 1280,
-                    // minHeight: 720,
-                    // maxHeight: 720
                   }
                 }
       };
@@ -184,29 +179,7 @@ function handleLeave() {
    yourConn.onicecandidate = null; 
    yourConn.onaddstream = null; 
 };
-//MARKOOOOOOB
 
-/*function openDataChannel() { 
-
-   var dataChannelOptions = { 
-      reliable:true 
-   }; 
-    
-   dataChannel = yourConn.createDataChannel("channel1", dataChannelOptions);
-    
-   dataChannel.onerror = function (error) { 
-      console.log("Error:", error); 
-   };
-    console.log('datachannel created');
-    dataChannel.addEventListener("message", e => {
-       console.log('recieved message');
-      //send data using IPC to main
-      ipc.send('robotData-send',e.data);
-      //Event listener
-      ipc.on('robotData-reply', function(event,arg) {
-      });
-    });
-}*/
 function receiveChannelCallback(event) {
    receiveChannel = event.channel;
    receiveChannel.onmessage = handleReceiveMessage;
@@ -216,8 +189,6 @@ function receiveChannelCallback(event) {
 
  function handleReceiveMessage(event)
 {
-  // console.log(event.data);
-
   //send data using IPC to main
   ipc.send('robotData-send',event.data);
   //Event listener
