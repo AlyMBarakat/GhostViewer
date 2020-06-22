@@ -1,4 +1,9 @@
 # GhostViewer
+A Team Viewer like app for remote streaming and controlling other PCs, made with Electron JS, webRTC & Robot JS
 
-1. Clone the repo
-2. run: $npm install
+## Install and run
+  **run: $npm install**
+       **$npm start**
+
+## Signaling Server : https://github.com/AlyMBarakat/SignallingServer
+  
